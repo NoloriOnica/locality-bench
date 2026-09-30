@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "locality-bench"
+version = "0.1.0"
+description = "Auditable regional image-editing evaluation with explicit success and coverage"
+readme = "PACKAGE_README.md"
+requires-python = ">=3.10"
+authors = [{name = "Kaliraj Santosh"}]
+dependencies = ["numpy>=1.24,<3", "Pillow>=11,<13", "scikit-image>=0.24,<0.27"]
+
+[project.urls]
+Repository = "https://github.com/NoloriOnica/locality-bench"
+Issues = "https://github.com/NoloriOnica/locality-bench/issues"
+
+[project.optional-dependencies]
+http = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1"]
+test = ["pytest>=8,<10", "httpx>=0.27,<1"]
+
+[project.scripts]
+locality-bench = "locality_bench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+locality_bench = ["data/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests/package"]
+pythonpath = ["src"]

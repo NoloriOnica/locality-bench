@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying report when using this evaluation software."
+title: "Locality Bench: An Audit of Object-Centric Image Editing"
+type: software
+authors:
+  - family-names: Santosh
+    given-names: Kaliraj
+version: 0.1.0
+date-released: 2026-09-30
+repository-code: "https://github.com/NoloriOnica/locality-bench"
+abstract: "Regional image-editing evaluation with explicit success, eligibility, coverage and provenance. Research preview."

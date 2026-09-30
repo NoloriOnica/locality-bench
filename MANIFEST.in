@@ -1,0 +1,6 @@
+include PACKAGE_README.md CITATION.cff
+exclude README.md
+recursive-include docs/package *.md
+recursive-include tests/package *.py
+include scripts/package_verify.py
+include scripts/repair_stress_suite.py scripts/phase5_locality_metrics.py scripts/phase5_common.py scripts/phase4_common.py
